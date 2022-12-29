@@ -93,6 +93,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Repairs.resx">
+      <DependentUpon>Repairs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Spares.resx">
       <DependentUpon>Spares.cs</DependentUpon>
     </EmbeddedResource>
