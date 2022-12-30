@@ -67,7 +67,50 @@ namespace Mobile_Repairs_MS
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
+            if (CustCb.SelectedIndex == -1 || PhoneTb.Text == "" || ProblemTb.Text == "" || DNameTb.Text == ""
+                || ModelTb.Text == "" || SpareCb.SelectedIndex == -1 || TotalTb.Text == "" || SpareCostTb.Text == "")
+            {
+                MessageBox.Show("Missing Data");
+            }
+            else
+            {
+                try
+                {
+                    string RDate = RepDateTb.Value.Date.ToString("yyyyMMdd");
+                    int Customer = Convert.ToInt32(CustCb.SelectedValue.ToString());
+                    string CPhone = PhoneTb.Text;
+                    string DeviceName = DNameTb.Text;
+                    string DeviceModle = ModelTb.Text;
+                    string Problem = ProblemTb.Text;
+                    int Spare = Convert.ToInt32(SpareCb.SelectedValue.ToString());
+                    int Total = Convert.ToInt32(TotalTb.Text);
+                    int GrdTotal = Convert.ToInt32(SpareCostTb.Text) + Total;
+                    string Query = "insert into repairTbl values ('{0}',{1},'{2}','{3}','{4}','{5}',{6},{7})";
+                    Query = string.Format(Query, RDate, Customer, CPhone, DeviceName, DeviceModle, Problem, Spare, GrdTotal);
+                    Con.SetData(Query);
+                    MessageBox.Show("Repair Add !!!!");
+                    ShowRepairs();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void SpareCostTb_TextChanged(object sender, EventArgs e)
+        {
             
+        }
+
+        private void SpareCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetCost();
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
