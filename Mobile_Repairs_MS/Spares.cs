@@ -98,5 +98,29 @@ namespace Mobile_Repairs_MS
                 }
             }
         }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (Key == 0)
+            {
+                MessageBox.Show("Select Spare");
+            }
+            else
+            {
+                try
+                {
+                    String Query = "Delete from SpareTbl where SpCode = {0}";
+                    Query = String.Format(Query, Key);
+                    Con.SetData(Query);
+                    MessageBox.Show("Part Deleted !!!!");
+                    ShowSpares();
+                    clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
     }
 }
