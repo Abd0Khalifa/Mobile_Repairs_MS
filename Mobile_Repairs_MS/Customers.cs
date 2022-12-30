@@ -27,6 +27,15 @@ namespace Mobile_Repairs_MS
             CustomerList.DataSource = Con.GetData(Query);
         }
 
+
+        private void clear()
+        {
+            CustNameTb.Text = "";
+            CustAddTb.Text = "";
+            CustPhoneTb.Text = "";
+            Key = 0;
+        }
+
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
@@ -73,6 +82,11 @@ namespace Mobile_Repairs_MS
             {
                 Key = Convert.ToInt32(CustomerList.SelectedRows[0].Cells[0].Value.ToString());
             }
+
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
 
         }
     }
