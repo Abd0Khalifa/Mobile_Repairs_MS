@@ -36,6 +36,7 @@ namespace Mobile_Repairs_MS
             }
             else
             {
+                MessageBox.Show("Wrong in Username or Password");
                 UNameTb.Text = "";
                 PassTb.Text = "";
 
