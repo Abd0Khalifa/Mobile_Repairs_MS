@@ -96,6 +96,7 @@ namespace Mobile_Repairs_MS
             this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 13F);
             this.textBox1.Location = new System.Drawing.Point(311, 295);
             this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(222, 28);
             this.textBox1.TabIndex = 21;
             // 
@@ -120,6 +121,7 @@ namespace Mobile_Repairs_MS
             this.LoginBtn.TabIndex = 23;
             this.LoginBtn.Text = "Login";
             this.LoginBtn.UseVisualStyleBackColor = false;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // pictureBox1
             // 
@@ -150,6 +152,7 @@ namespace Mobile_Repairs_MS
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 25;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Login
             // 

@@ -16,5 +16,15 @@ namespace Mobile_Repairs_MS
         {
             InitializeComponent();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
