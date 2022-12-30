@@ -58,5 +58,22 @@ namespace Mobile_Repairs_MS
             }
 
             }
+
+        int Key = 0;
+        private void CustomerList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CustNameTb.Text = CustomerList.SelectedRows[0].Cells[1].Value.ToString();
+            CustPhoneTb.Text = CustomerList.SelectedRows[0].Cells[2].Value.ToString();
+            CustAddTb.Text = CustomerList.SelectedRows[0].Cells[3].Value.ToString();
+            if (CustNameTb.Text == "")
+            {
+                Key = 0;
+            }
+            else
+            {
+                Key = Convert.ToInt32(CustomerList.SelectedRows[0].Cells[0].Value.ToString());
+            }
+
+        }
     }
 }
