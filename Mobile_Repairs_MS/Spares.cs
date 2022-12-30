@@ -47,7 +47,7 @@ namespace Mobile_Repairs_MS
                     String Query = "insert into SpareTbl values ('{0}',{1})";
                     Query = String.Format(Query, PName, PCost);
                     Con.SetData(Query);
-                    MessageBox.Show("Spare Add !!!!");
+                    MessageBox.Show("Part Add !!!!");
                     ShowSpares();
                     clear();
                 }
@@ -70,6 +70,32 @@ namespace Mobile_Repairs_MS
             else
             {
                 Key = Convert.ToInt32(PartsList.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            if (PartNameTb.Text == "" || PartCostTb.Text == "")
+            {
+                MessageBox.Show("Missing Data");
+            }
+            else
+            {
+                try
+                {
+                    String PName = PartNameTb.Text;
+                    int PCost = Convert.ToInt32(PartCostTb.Text);
+                    String Query = "Update SpareTbl set SpName = '{0}', SpCost = {1} where SpCode ={2}";
+                    Query = String.Format(Query, PName, PCost, Key);
+                    Con.SetData(Query);
+                    MessageBox.Show("Part Updated !!!!");
+                    ShowSpares();
+                    clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
             }
         }
     }
