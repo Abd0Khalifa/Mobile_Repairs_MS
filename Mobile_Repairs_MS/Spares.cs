@@ -30,6 +30,7 @@ namespace Mobile_Repairs_MS
         {
             PartNameTb.Text = "";
             PartCostTb.Text = "";
+            Key = 0;
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
