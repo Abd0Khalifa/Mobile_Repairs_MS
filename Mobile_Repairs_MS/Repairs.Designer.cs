@@ -56,7 +56,7 @@ namespace Mobile_Repairs_MS
             this.label6 = new System.Windows.Forms.Label();
             this.ModelTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.SpareCb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.SpareCostTb = new System.Windows.Forms.TextBox();
@@ -319,13 +319,13 @@ namespace Mobile_Repairs_MS
             this.label7.Text = "Problem";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // comboBox2
+            // SpareCb
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(117, 448);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(222, 30);
-            this.comboBox2.TabIndex = 35;
+            this.SpareCb.FormattingEnabled = true;
+            this.SpareCb.Location = new System.Drawing.Point(117, 448);
+            this.SpareCb.Name = "SpareCb";
+            this.SpareCb.Size = new System.Drawing.Size(222, 30);
+            this.SpareCb.TabIndex = 35;
             // 
             // label8
             // 
@@ -380,7 +380,7 @@ namespace Mobile_Repairs_MS
             this.Controls.Add(this.TotalTb);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.SpareCostTb);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.SpareCb);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -440,7 +440,7 @@ namespace Mobile_Repairs_MS
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox CustCb;
         private Guna.UI2.WinForms.Guna2DateTimePicker RepDateTb;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox SpareCb;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox TotalTb;
