@@ -36,7 +36,7 @@ namespace Mobile_Repairs_MS
             this.label2 = new System.Windows.Forms.Label();
             this.UNameTb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PassTb = new System.Windows.Forms.TextBox();
             this.PasswordTb = new System.Windows.Forms.Label();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -91,14 +91,14 @@ namespace Mobile_Repairs_MS
             this.label1.TabIndex = 18;
             this.label1.Text = "Username";
             // 
-            // textBox1
+            // PassTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 13F);
-            this.textBox1.Location = new System.Drawing.Point(311, 295);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(222, 28);
-            this.textBox1.TabIndex = 21;
+            this.PassTb.Font = new System.Drawing.Font("Trebuchet MS", 13F);
+            this.PassTb.Location = new System.Drawing.Point(311, 295);
+            this.PassTb.Name = "PassTb";
+            this.PassTb.PasswordChar = '*';
+            this.PassTb.Size = new System.Drawing.Size(222, 28);
+            this.PassTb.TabIndex = 21;
             // 
             // PasswordTb
             // 
@@ -163,7 +163,7 @@ namespace Mobile_Repairs_MS
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.LoginBtn);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PassTb);
             this.Controls.Add(this.PasswordTb);
             this.Controls.Add(this.UNameTb);
             this.Controls.Add(this.label1);
@@ -189,7 +189,7 @@ namespace Mobile_Repairs_MS
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PassTb;
         private System.Windows.Forms.Label PasswordTb;
         private System.Windows.Forms.TextBox UNameTb;
         private System.Windows.Forms.Label label1;

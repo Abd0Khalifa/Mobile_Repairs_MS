@@ -24,7 +24,22 @@ namespace Mobile_Repairs_MS
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
+            if (UNameTb.Text == "" || PassTb.Text == "")
+            {
+                MessageBox.Show("Missing Data !!!!");
+            }
+            else if (UNameTb.Text == "Abdo" && PassTb.Text == "Abdo")
+            {
+                Customers Custform = new Customers();
+                Custform.Show();
+                this.Hide();
+            }
+            else
+            {
+                UNameTb.Text = "";
+                PassTb.Text = "";
 
+            }
         }
     }
 }
