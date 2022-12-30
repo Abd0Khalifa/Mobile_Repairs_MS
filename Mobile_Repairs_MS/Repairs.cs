@@ -108,9 +108,33 @@ namespace Mobile_Repairs_MS
             GetCost();
         }
 
+        int Key = 0;
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
+            if (Key == 0)
+            {
+                MessageBox.Show("Select a Data");
+            }
+            else
+            {
+                try
+                {
+                    string Query = "delete from RepairTbl where RepCode = {0}";
+                    Query = string.Format(Query, Key);
+                    Con.SetData(Query);
+                    MessageBox.Show("Repair Deleted !!!!");
+                    ShowRepairs();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
 
+        private void RepairsList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Key = Convert.ToInt32(RepairsList.SelectedRows[0].Cells[0].Value.ToString());
         }
     }
 }
