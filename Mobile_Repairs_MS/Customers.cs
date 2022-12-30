@@ -34,7 +34,29 @@ namespace Mobile_Repairs_MS
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
+            if (CustNameTb.Text == "" || CustAddTb.Text == "" || CustPhoneTb.Text == "")
+            {
+                MessageBox.Show("Missing Data");
+            }
+            else
+            {
+                try
+                {
+                    String CName = CustNameTb.Text;
+                    String CPhone = CustPhoneTb.Text;
+                    String CAddress = CustAddTb.Text;
+                    String Query = "insert into CustomerTbl values ('{0}','{1}','{2}')";
+                    Query = String.Format(Query, CName, CPhone, CAddress);
+                    Con.SetData(Query);
+                    MessageBox.Show("Customer Add !!!!");
+                    ShowCustomers();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
 
-        }
+            }
     }
 }
