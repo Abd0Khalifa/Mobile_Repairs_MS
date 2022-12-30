@@ -87,7 +87,29 @@ namespace Mobile_Repairs_MS
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-
+            if (CustNameTb.Text == "" || CustAddTb.Text == "" || CustPhoneTb.Text == "")
+            {
+                MessageBox.Show("Missing Data");
+            }
+            else
+            {
+                try
+                {
+                    String CName = CustNameTb.Text;
+                    String CPhone = CustPhoneTb.Text;
+                    String CAddress = CustAddTb.Text;
+                    String Query = "Update CustomerTbl set CustName ='{0}', CustPhone = '{1}', CustAdd = '{2}' where CustCode = {3}";
+                    Query = String.Format(Query, CName, CPhone, CAddress, Key);
+                    Con.SetData(Query);
+                    MessageBox.Show("Customer Updated !!!!");
+                    ShowCustomers();
+                    clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
         }
     }
 }
